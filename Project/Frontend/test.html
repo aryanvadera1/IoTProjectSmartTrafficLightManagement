@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Light Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        #junction {
+            display: grid;
+            grid-template-columns: 150px 40px 150px;
+            grid-template-rows: 150px 40px 150px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .traffic-light {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #555;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 12px;
+            color: white;
+        }
+        .light {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+        .timer, .cars {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid #007bff;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .road {
+            background-color: #444;
+            height: 150px;
+            width: 20px;
+            margin: auto;
+        }
+        .horizontal-road {
+            background-color: #444;
+            width: 150px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Smart Traffic Light Management System</h1>
+    <div id="junction">
+        <div class="traffic-light" id="light1">
+            <div class="light red"></div>
+            <div class="timer" id="timer1">Timer: 0s</div>
+            <div class="cars" id="cars1">Cars: 0</div>
+        </div>
+        <div class="horizontal-road"></div>
+        <div class="traffic-light" id="light2">
+            <div class="light red"></div>
+            <div class="timer" id="timer2">Timer: 0s</div>
+            <div class="cars" id="cars2">Cars: 0</div>
+        </div>
+
+        <div class="road"></div>
+        <div class="road"></div>
+        <div class="road"></div>
+
+        <div class="traffic-light" id="light3">
+            <div class="light red"></div>
+            <div class="timer" id="timer3">Timer: 0s</div>
+            <div class="cars" id="cars3">Cars: 0</div>
+        </div>
+        <div class="horizontal-road"></div>
+        <div class="traffic-light" id="light4">
+            <div class="light red"></div>
+            <div class="timer" id="timer4">Timer: 0s</div>
+            <div class="cars" id="cars4">Cars: 0</div>
+        </div>
+    </div>
+
+    <button onclick="LoadnewData()">Load New Data</button>
+
+</body>
+</html>
